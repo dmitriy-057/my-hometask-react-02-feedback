@@ -3,13 +3,26 @@ import React, {Component} from "react";
 
 class Feedback extends Component {
     state = {
-        value: 0
+        good: 0,
+        neutral: 0,
+        bad:0
+
     }
 // метод класса
-handleIncrement = ()=> {
+handleIncrementGood = ()=> {
     console.log("Click on button");
     this.setState(prevState => {
-        value: prevState +1
+        return { 
+            good: prevState.good + 1
+        }
+    })
+}
+handleIncrementNeutral = ()=> {
+    console.log("Click on button");
+    this.setState(prevState => {
+        return { 
+            neytra: prevState.good + 1
+        }
     })
 }
 render() {
@@ -17,14 +30,14 @@ render() {
        <>
         <div>
             <h2>Please leave feedback</h2>
-            <button type="button" onClick={this.handleIncrement}>Good</button>
+            <button type="button" onClick={this.handleIncrementGood}>Good</button>
             <button type="button" onClick={this.handleIncrement}>Neutral</button>
             <button type="button" onClick={this.handleIncrement}>Bad</button>
             <h2>Statistics</h2>
         </div>
 
        <ul>
-            <li>Good:{this.state.value}</li>
+            <li>Good:{this.state.good}</li>
             <li>Neutral:{this.state.value}</li>
             <li>Bad:{this.state.value}</li>
             <li>Total:<span>amount</span></li>
