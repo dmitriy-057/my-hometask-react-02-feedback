@@ -21,7 +21,7 @@ handleIncrementNeutral = ()=> {
     console.log("Click on button");
     this.setState(prevState => {
         return { 
-            neytra: prevState.good + 1
+            neutral: prevState.good + 1
         }
     })
 }
