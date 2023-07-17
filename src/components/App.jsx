@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-// import Statistics from "./Statistics/Statistics";
+import Statistics from "./Statistics/Statistics";
 // import FeedbackOptions from "./FeedbackOptions/FeedbackOptions";
 // <FeedbackOptions options={} onLeaveFeedback={} /> 
-// <Statistics good={good} neutral={neutral} bad={bad} total={countTotalFeedback} positivePercentage={countPositiveFeedbackPercentage} />
+//<Statistics good={good} neutral={neutral} bad={bad} total={countTotalFeedback} positivePercentage={countPositiveFeedbackPercentage} /> 
 export class App extends Component {
 
   state = {
@@ -61,20 +61,21 @@ render() {
      <div className="container">
       <h2>Please leave feedback</h2>
 
-      <div>
+    <div>
         <button type="button" onClick={this.handleIncrementGood}>Good</button>
         <button type="button" onClick={this.handleIncrementNeutral}>Neutral</button>
         <button type="button" onClick={this.handleIncrementBad}>Bad</button>
     </div>
 
-    <h2>Statistics</h2>
+    {/* <h2>Statistics</h2>
     <ul>
         <li>Good:{good}</li>
         <li>Neutral:{neutral}</li>
         <li>Bad:{bad}</li>
         <li>Total:<span>{countTotalFeedback}</span></li>
         <li>Possitive feedback:<span>{countPositiveFeedbackPercentage}%</span></li>
-    </ul>
+    </ul> */}
+    <Statistics good={good} neutral={neutral} bad={bad} total={countTotalFeedback} positivePercentage={countPositiveFeedbackPercentage} /> 
      </div> 
   )
 }
