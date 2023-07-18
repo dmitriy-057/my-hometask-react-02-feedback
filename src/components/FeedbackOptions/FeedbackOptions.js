@@ -1,18 +1,21 @@
 import React, {Component} from "react";
 
+
 class FeedbackOptions extends Component {
+
 render() {
-   
+   const {options, onLeaveFeedback} = this.props;
 return (
     <>
-    <div>
-        <button type="button" onClick={this.handleIncrementGood}>Good</button>
-        <button type="button" onClick={this.handleIncrementNeutral}>Neutral</button>
-        <button type="button" onClick={this.handleIncrementBad}>Bad</button>
-    </div>
+    {options.map(option=> {
+        return (
+            <button key={option} type="button" onClick={()=> onLeaveFeedback(option)}>{option}</button>
+        )
+    })}
     </>
 )
 }
 }
 
 export default FeedbackOptions;
+

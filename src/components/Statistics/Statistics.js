@@ -11,7 +11,7 @@ class Statistics extends Component {
     };
 render() {
     const {good, neutral, bad, total, positivePercentage} = this.props;
-return(
+return (
     <>
     <h2>Statistics</h2>
     <ul className="statistics__list">
@@ -26,13 +26,13 @@ return(
 }
 }
 
-// Statistics.propTypes = {
-//     good: PropTypes.number,
-//     neutral: PropTypes.number,
-//     bad: PropTypes.number,
-//     total: PropTypes.number,
-//     positivePercentage: PropTypes.number
-// }
+Statistics.propTypes = {
+    good: PropTypes.number,
+    neutral: PropTypes.number,
+    bad: PropTypes.number,
+    total: PropTypes.number,
+    positivePercentage: PropTypes.number
+}
 
 export default Statistics;
 
