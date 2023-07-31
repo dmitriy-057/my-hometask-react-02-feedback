@@ -7,7 +7,6 @@ class Statistics extends Component {
         neutral: PropTypes.number,
         bad: PropTypes.number,
         total: PropTypes.number,
-        positivePercentage: PropTypes.number
     };
 render() {
     const {good, neutral, bad, total, positivePercentage} = this.props;
@@ -19,19 +18,11 @@ return (
         <li>Neutral:{neutral}</li>
         <li>Bad:{bad}</li>
         <li>Total:<span>{total}</span></li>
-        <li>Possitive feedback:<span>{positivePercentage}%</span></li>
+        <li>Possitive feedback:<span>{positivePercentage} %</span></li>
     </ul>
     </>
 )
 }
-}
-
-Statistics.propTypes = {
-    good: PropTypes.number,
-    neutral: PropTypes.number,
-    bad: PropTypes.number,
-    total: PropTypes.number,
-    positivePercentage: PropTypes.number
 }
 
 export default Statistics;

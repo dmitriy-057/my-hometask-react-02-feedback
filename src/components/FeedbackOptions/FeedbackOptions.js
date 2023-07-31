@@ -7,7 +7,7 @@ render() {
    const {options, onLeaveFeedback} = this.props;
 return (
     <>
-    {options.map(option=> {
+    {options.map(option => {
         return (
             <button key={option} type="button" onClick={()=> onLeaveFeedback(option)}>{option}</button>
         )
